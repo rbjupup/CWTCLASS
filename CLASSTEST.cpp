@@ -56,8 +56,8 @@ BOOL CCLASSTESTApp::InitInstance()
 	InitCommonControls();
 	CWinApp::InitInstance();
 	AfxEnableControlContainer();
-	globalData.SetDPIAware ();
 #ifdef BCG
+	globalData.SetDPIAware ();
 	CBCGPVisualManager2010::SetStyle (CBCGPVisualManager2010::VS2010_Black);
 	CBCGPVisualManager::SetDefaultManager (RUNTIME_CLASS (CBCGPVisualManager2010));
 #endif

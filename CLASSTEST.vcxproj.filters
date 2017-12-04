@@ -90,42 +90,6 @@
     <ClInclude Include="CLASS\SOCKET\SocketManage.h">
       <Filter>CLASS\SOCKET</Filter>
     </ClInclude>
-    <ClInclude Include="INC\MotionCard\Dmc1380.h">
-      <Filter>MotionCard</Filter>
-    </ClInclude>
-    <ClInclude Include="INC\MotionCard\DMC2410.h">
-      <Filter>MotionCard</Filter>
-    </ClInclude>
-    <ClInclude Include="INC\MotionCard\GoogolExtroIO.h">
-      <Filter>MotionCard</Filter>
-    </ClInclude>
-    <ClInclude Include="INC\MotionCard\goolgol.h">
-      <Filter>MotionCard</Filter>
-    </ClInclude>
-    <ClInclude Include="INC\MotionCard\gts.h">
-      <Filter>MotionCard</Filter>
-    </ClInclude>
-    <ClInclude Include="INC\MotionCard\Input.h">
-      <Filter>MotionCard</Filter>
-    </ClInclude>
-    <ClInclude Include="INC\MotionCard\LTDMC.h">
-      <Filter>MotionCard</Filter>
-    </ClInclude>
-    <ClInclude Include="INC\MotionCard\MachineDef.h">
-      <Filter>MotionCard</Filter>
-    </ClInclude>
-    <ClInclude Include="INC\MotionCard\MotionCard1.h">
-      <Filter>MotionCard</Filter>
-    </ClInclude>
-    <ClInclude Include="INC\MotionCard\MotionDef.h">
-      <Filter>MotionCard</Filter>
-    </ClInclude>
-    <ClInclude Include="INC\MotionCard\Motor.h">
-      <Filter>MotionCard</Filter>
-    </ClInclude>
-    <ClInclude Include="INC\MotionCard\Output.h">
-      <Filter>MotionCard</Filter>
-    </ClInclude>
     <ClInclude Include="CLASS\COM\CommPort.h">
       <Filter>CLASS\COM</Filter>
     </ClInclude>
@@ -192,6 +156,42 @@
     <ClInclude Include="XFunCom.h">
       <Filter>assistant</Filter>
     </ClInclude>
+    <ClInclude Include="EXTERN\MotionCard\INC\Dmc1380.h">
+      <Filter>MotionCard</Filter>
+    </ClInclude>
+    <ClInclude Include="EXTERN\MotionCard\INC\DMC2410.h">
+      <Filter>MotionCard</Filter>
+    </ClInclude>
+    <ClInclude Include="EXTERN\MotionCard\INC\GoogolExtroIO.h">
+      <Filter>MotionCard</Filter>
+    </ClInclude>
+    <ClInclude Include="EXTERN\MotionCard\INC\goolgol.h">
+      <Filter>MotionCard</Filter>
+    </ClInclude>
+    <ClInclude Include="EXTERN\MotionCard\INC\gts.h">
+      <Filter>MotionCard</Filter>
+    </ClInclude>
+    <ClInclude Include="EXTERN\MotionCard\INC\Input.h">
+      <Filter>MotionCard</Filter>
+    </ClInclude>
+    <ClInclude Include="EXTERN\MotionCard\INC\LTDMC.h">
+      <Filter>MotionCard</Filter>
+    </ClInclude>
+    <ClInclude Include="EXTERN\MotionCard\INC\MachineDef.h">
+      <Filter>MotionCard</Filter>
+    </ClInclude>
+    <ClInclude Include="EXTERN\MotionCard\INC\MotionCard1.h">
+      <Filter>MotionCard</Filter>
+    </ClInclude>
+    <ClInclude Include="EXTERN\MotionCard\INC\MotionDef.h">
+      <Filter>MotionCard</Filter>
+    </ClInclude>
+    <ClInclude Include="EXTERN\MotionCard\INC\Motor.h">
+      <Filter>MotionCard</Filter>
+    </ClInclude>
+    <ClInclude Include="EXTERN\MotionCard\INC\Output.h">
+      <Filter>MotionCard</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CLASSTEST.cpp">
@@ -214,24 +214,6 @@
     </ClCompile>
     <ClCompile Include="CLASS\SOCKET\SocketManage.cpp">
       <Filter>CLASS\SOCKET</Filter>
-    </ClCompile>
-    <ClCompile Include="INC\MotionCard\GoogolExtroIO.cpp">
-      <Filter>MotionCard</Filter>
-    </ClCompile>
-    <ClCompile Include="INC\MotionCard\goolgol.cpp">
-      <Filter>MotionCard</Filter>
-    </ClCompile>
-    <ClCompile Include="INC\MotionCard\Input.cpp">
-      <Filter>MotionCard</Filter>
-    </ClCompile>
-    <ClCompile Include="INC\MotionCard\MotionCard1.cpp">
-      <Filter>MotionCard</Filter>
-    </ClCompile>
-    <ClCompile Include="INC\MotionCard\Motor.cpp">
-      <Filter>MotionCard</Filter>
-    </ClCompile>
-    <ClCompile Include="INC\MotionCard\Output.cpp">
-      <Filter>MotionCard</Filter>
     </ClCompile>
     <ClCompile Include="CLASS\COM\CommPort.cpp">
       <Filter>CLASS\COM</Filter>
@@ -289,6 +271,24 @@
     </ClCompile>
     <ClCompile Include="YCIni.cpp">
       <Filter>assistant</Filter>
+    </ClCompile>
+    <ClCompile Include="EXTERN\MotionCard\INC\GoogolExtroIO.cpp">
+      <Filter>MotionCard</Filter>
+    </ClCompile>
+    <ClCompile Include="EXTERN\MotionCard\INC\goolgol.cpp">
+      <Filter>MotionCard</Filter>
+    </ClCompile>
+    <ClCompile Include="EXTERN\MotionCard\INC\Input.cpp">
+      <Filter>MotionCard</Filter>
+    </ClCompile>
+    <ClCompile Include="EXTERN\MotionCard\INC\MotionCard1.cpp">
+      <Filter>MotionCard</Filter>
+    </ClCompile>
+    <ClCompile Include="EXTERN\MotionCard\INC\Motor.cpp">
+      <Filter>MotionCard</Filter>
+    </ClCompile>
+    <ClCompile Include="EXTERN\MotionCard\INC\Output.cpp">
+      <Filter>MotionCard</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

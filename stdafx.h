@@ -40,6 +40,8 @@
 
 
 
+#define TEST_CLASS 1
+#define BCG 1
 
 
 
@@ -55,12 +57,9 @@
 #endif
 #endif
 
-
-#define TEST_CLASS 1
-
 #include "XFunCom.h"
 
-#define BCG 1
+
 
 #ifdef BCG
 #include <BCGCBProInc.h>			// BCGControlBar Pro

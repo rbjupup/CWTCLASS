@@ -14,6 +14,12 @@
 #include <gdiplus.h>  
 using namespace Gdiplus;  
 #pragma comment(lib, "gdiplus.lib")  
+#ifdef BCG
+#include "afxwin.h"
+#include "afxcmn.h"
+#include "BCGPVisualCtrl.h"
+#include "BCGPChartVisualObject.h"
+#endif
 // CCLASSTESTApp:
 // 有关此类的实现，请参阅 CLASSTEST.cpp
 //
