@@ -14,6 +14,7 @@
     <ProjectGuid>{641959B1-109C-45AA-8B54-95DB10E50277}</ProjectGuid>
     <RootNamespace>CLASSTEST</RootNamespace>
     <Keyword>MFCProj</Keyword>
+    <ProjectName>CWCLASS</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -110,12 +111,6 @@
     <ClInclude Include="BOSSCLASS.h" />
     <ClInclude Include="CLASS\BCG\BCGdlg.h" />
     <ClInclude Include="CLASS\BCG\CWBCG.h" />
-    <ClInclude Include="CLASS\CAM\Camera.h" />
-    <ClInclude Include="CLASS\CAM\CamList.h" />
-    <ClInclude Include="CLASS\CAM\Image.h" />
-    <ClInclude Include="CLASS\CAM\ImageingSource.h" />
-    <ClInclude Include="CLASS\CAM\KSJCamera.h" />
-    <ClInclude Include="CLASS\CAM\YPtgCamera.h" />
     <ClInclude Include="CLASS\COM\CommPort.h" />
     <ClInclude Include="CLASS\MFCCTRL\GdipButton.h" />
     <ClInclude Include="CLASS\MFCCTRL\WMFCBtn.h" />
@@ -126,21 +121,7 @@
     <ClInclude Include="CLASS\ROB\WListen.h" />
     <ClInclude Include="CLASS\ROB\WROBO.h" />
     <ClInclude Include="CLASS\ROB\WTalk.h" />
-    <ClInclude Include="CLASS\SOCKET\ComSocket.h" />
-    <ClInclude Include="CLASS\SOCKET\SocketManage.h" />
     <ClInclude Include="DefineOfString.h" />
-    <ClInclude Include="EXTERN\MotionCard\INC\Dmc1380.h" />
-    <ClInclude Include="EXTERN\MotionCard\INC\DMC2410.h" />
-    <ClInclude Include="EXTERN\MotionCard\INC\GoogolExtroIO.h" />
-    <ClInclude Include="EXTERN\MotionCard\INC\goolgol.h" />
-    <ClInclude Include="EXTERN\MotionCard\INC\gts.h" />
-    <ClInclude Include="EXTERN\MotionCard\INC\Input.h" />
-    <ClInclude Include="EXTERN\MotionCard\INC\LTDMC.h" />
-    <ClInclude Include="EXTERN\MotionCard\INC\MachineDef.h" />
-    <ClInclude Include="EXTERN\MotionCard\INC\MotionCard1.h" />
-    <ClInclude Include="EXTERN\MotionCard\INC\MotionDef.h" />
-    <ClInclude Include="EXTERN\MotionCard\INC\Motor.h" />
-    <ClInclude Include="EXTERN\MotionCard\INC\Output.h" />
     <ClInclude Include="WCalibreate.h" />
     <ClInclude Include="CLASSTEST.h" />
     <ClInclude Include="CLASSTESTDlg.h" />
@@ -156,11 +137,6 @@
     <ClCompile Include="BOSSCLASS.cpp" />
     <ClCompile Include="class\bcg\bcgdlg.CPP" />
     <ClCompile Include="CLASS\BCG\CWBCG.cpp" />
-    <ClCompile Include="CLASS\CAM\Camera.cpp" />
-    <ClCompile Include="CLASS\CAM\CamList.cpp" />
-    <ClCompile Include="CLASS\CAM\ImageingSource.cpp" />
-    <ClCompile Include="CLASS\CAM\KSJCamera.cpp" />
-    <ClCompile Include="CLASS\CAM\YPtgCamera.cpp" />
     <ClCompile Include="CLASS\COM\CommPort.cpp" />
     <ClCompile Include="CLASS\MFCCTRL\GdipButton.cpp" />
     <ClCompile Include="CLASS\MFCCTRL\WMFCBtn.cpp" />
@@ -174,14 +150,6 @@
     <ClCompile Include="CLASS\ROB\WListen.cpp" />
     <ClCompile Include="CLASS\ROB\WROBO.cpp" />
     <ClCompile Include="CLASS\ROB\WTalk.cpp" />
-    <ClCompile Include="CLASS\SOCKET\ComSocket.cpp" />
-    <ClCompile Include="CLASS\SOCKET\SocketManage.cpp" />
-    <ClCompile Include="EXTERN\MotionCard\INC\GoogolExtroIO.cpp" />
-    <ClCompile Include="EXTERN\MotionCard\INC\goolgol.cpp" />
-    <ClCompile Include="EXTERN\MotionCard\INC\Input.cpp" />
-    <ClCompile Include="EXTERN\MotionCard\INC\MotionCard1.cpp" />
-    <ClCompile Include="EXTERN\MotionCard\INC\Motor.cpp" />
-    <ClCompile Include="EXTERN\MotionCard\INC\Output.cpp" />
     <ClCompile Include="WCalibreate.cpp" />
     <ClCompile Include="CLASSTEST.cpp" />
     <ClCompile Include="CLASSTESTDlg.cpp" />

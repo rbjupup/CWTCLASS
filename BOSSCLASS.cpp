@@ -85,22 +85,22 @@ bool BOSSCLASS::CallFunction( CString classname,CString funname ,vector<CString>
 		if (funname == CALFUN6)
 			m_calibreateBoardWithMove.TESTAngleOfAxis();
 	}
-	if (classname == CLASSNAME2)
-	{
-		if (funname == SOCKETFUN1){
-			m_sock.InitSockLib();
-			m_sock.InitServer(param[0].GetBuffer(),5006);
-		}
-		if (funname == SOCKETFUN2){
-			m_sock.InitSockLib();
-			m_sock.InitClient(param[0].GetBuffer(),5006);
-			m_sock.SendMachineInfo(atoi(param[1]));
-		}
-		if (funname == SOCKETFUN3)
-			m_sock.TestSendSingleMsg(atoi(param[0]),0);
-		if (funname == SOCKETFUN4)
-			m_sock.TESTGETALLSINGAL();
-	}
+// 	if (classname == CLASSNAME2)
+// 	{
+// 		if (funname == SOCKETFUN1){
+// 			m_sock.InitSockLib();
+// 			m_sock.InitServer(param[0].GetBuffer(),5006);
+// 		}
+// 		if (funname == SOCKETFUN2){
+// 			m_sock.InitSockLib();
+// 			m_sock.InitClient(param[0].GetBuffer(),5006);
+// 			m_sock.SendMachineInfo(atoi(param[1]));
+// 		}
+// 		if (funname == SOCKETFUN3)
+// 			m_sock.TestSendSingleMsg(atoi(param[0]),0);
+// 		if (funname == SOCKETFUN4)
+// 			m_sock.TESTGETALLSINGAL();
+// 	}
 	if (classname == CLASSNAME3)
 	{
 		if (funname == COMFUN1){
@@ -133,18 +133,18 @@ bool BOSSCLASS::CallFunction( CString classname,CString funname ,vector<CString>
 			m_cwBcg.openABCGdlg();
 		}
 	}
-	if (classname == CLASSNAME5)
-	{
-		if (funname == CAMFUN1){
-			CStatic* img[1];
-			img[0] = &theApp.m_resdlg->m_Show;
-			m_camList.ConnectCam(img,"E:\\CameraInfo.ini");
-		}
-		if (funname == CAMFUN2){
-			m_camList.m_camera.m_pImage[0]->SaveImageToFile("E:\\pic.bmp");
-			AfxMessageBox("图像已经保存在E:\\pic.bmp");
-		}
-	}
+// 	if (classname == CLASSNAME5)
+// 	{
+// 		if (funname == CAMFUN1){
+// 			CStatic* img[1];
+// 			img[0] = &theApp.m_resdlg->m_Show;
+// 			m_camList.ConnectCam(img,"E:\\CameraInfo.ini");
+// 		}
+// 		if (funname == CAMFUN2){
+// 			m_camList.m_camera.m_pImage[0]->SaveImageToFile("E:\\pic.bmp");
+// 			AfxMessageBox("图像已经保存在E:\\pic.bmp");
+// 		}
+// 	}
 	if (classname == CLASSNAME6)
 	{
 		if (funname == ROBOFUN1){

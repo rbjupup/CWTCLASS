@@ -13,23 +13,11 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="MotionCard">
-      <UniqueIdentifier>{372ef889-576c-401b-b3a7-c4b4cdc3e0dc}</UniqueIdentifier>
-    </Filter>
     <Filter Include="CLASS">
       <UniqueIdentifier>{b033364e-8f93-4c98-bdbf-d08772bdea9c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="CLASS\SOCKET">
-      <UniqueIdentifier>{b125fa06-4739-449a-a8b7-4b6d74b2e7f6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CLASS\COM">
-      <UniqueIdentifier>{7690e724-75e4-4a59-904c-894e1bc4e6e4}</UniqueIdentifier>
-    </Filter>
     <Filter Include="CLASS\BCG">
       <UniqueIdentifier>{978d2967-5a74-4975-9af8-0c33156d017c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CLASS\CAM">
-      <UniqueIdentifier>{8205593d-62f1-4ce2-bf9a-1e17a21df34d}</UniqueIdentifier>
     </Filter>
     <Filter Include="CLASS\CWROB">
       <UniqueIdentifier>{ecae7e9c-2007-4a5b-8aa2-285acd5e24b0}</UniqueIdentifier>
@@ -42,6 +30,9 @@
     </Filter>
     <Filter Include="CLASS\CAL">
       <UniqueIdentifier>{3e56b4bf-211c-4217-9747-6b8922fb2e9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CLASS\COM">
+      <UniqueIdentifier>{a0e64583-4fd1-4fba-810d-5484d529677d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -84,15 +75,6 @@
     <ClInclude Include="Def.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="CLASS\SOCKET\ComSocket.h">
-      <Filter>CLASS\SOCKET</Filter>
-    </ClInclude>
-    <ClInclude Include="CLASS\SOCKET\SocketManage.h">
-      <Filter>CLASS\SOCKET</Filter>
-    </ClInclude>
-    <ClInclude Include="CLASS\COM\CommPort.h">
-      <Filter>CLASS\COM</Filter>
-    </ClInclude>
     <ClInclude Include="DefineOfString.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -101,24 +83,6 @@
     </ClInclude>
     <ClInclude Include="CLASS\BCG\CWBCG.h">
       <Filter>CLASS\BCG</Filter>
-    </ClInclude>
-    <ClInclude Include="CLASS\CAM\Camera.h">
-      <Filter>CLASS\CAM</Filter>
-    </ClInclude>
-    <ClInclude Include="CLASS\CAM\ImageingSource.h">
-      <Filter>CLASS\CAM</Filter>
-    </ClInclude>
-    <ClInclude Include="CLASS\CAM\Image.h">
-      <Filter>CLASS\CAM</Filter>
-    </ClInclude>
-    <ClInclude Include="CLASS\CAM\YPtgCamera.h">
-      <Filter>CLASS\CAM</Filter>
-    </ClInclude>
-    <ClInclude Include="CLASS\CAM\CamList.h">
-      <Filter>CLASS\CAM</Filter>
-    </ClInclude>
-    <ClInclude Include="CLASS\CAM\KSJCamera.h">
-      <Filter>CLASS\CAM</Filter>
     </ClInclude>
     <ClInclude Include="CLASS\ROB\WTalk.h">
       <Filter>CLASS\CWROB</Filter>
@@ -156,41 +120,8 @@
     <ClInclude Include="XFunCom.h">
       <Filter>assistant</Filter>
     </ClInclude>
-    <ClInclude Include="EXTERN\MotionCard\INC\Dmc1380.h">
-      <Filter>MotionCard</Filter>
-    </ClInclude>
-    <ClInclude Include="EXTERN\MotionCard\INC\DMC2410.h">
-      <Filter>MotionCard</Filter>
-    </ClInclude>
-    <ClInclude Include="EXTERN\MotionCard\INC\GoogolExtroIO.h">
-      <Filter>MotionCard</Filter>
-    </ClInclude>
-    <ClInclude Include="EXTERN\MotionCard\INC\goolgol.h">
-      <Filter>MotionCard</Filter>
-    </ClInclude>
-    <ClInclude Include="EXTERN\MotionCard\INC\gts.h">
-      <Filter>MotionCard</Filter>
-    </ClInclude>
-    <ClInclude Include="EXTERN\MotionCard\INC\Input.h">
-      <Filter>MotionCard</Filter>
-    </ClInclude>
-    <ClInclude Include="EXTERN\MotionCard\INC\LTDMC.h">
-      <Filter>MotionCard</Filter>
-    </ClInclude>
-    <ClInclude Include="EXTERN\MotionCard\INC\MachineDef.h">
-      <Filter>MotionCard</Filter>
-    </ClInclude>
-    <ClInclude Include="EXTERN\MotionCard\INC\MotionCard1.h">
-      <Filter>MotionCard</Filter>
-    </ClInclude>
-    <ClInclude Include="EXTERN\MotionCard\INC\MotionDef.h">
-      <Filter>MotionCard</Filter>
-    </ClInclude>
-    <ClInclude Include="EXTERN\MotionCard\INC\Motor.h">
-      <Filter>MotionCard</Filter>
-    </ClInclude>
-    <ClInclude Include="EXTERN\MotionCard\INC\Output.h">
-      <Filter>MotionCard</Filter>
+    <ClInclude Include="CLASS\COM\CommPort.h">
+      <Filter>CLASS\COM</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -209,35 +140,11 @@
     <ClCompile Include="ResDlg.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="CLASS\SOCKET\ComSocket.cpp">
-      <Filter>CLASS\SOCKET</Filter>
-    </ClCompile>
-    <ClCompile Include="CLASS\SOCKET\SocketManage.cpp">
-      <Filter>CLASS\SOCKET</Filter>
-    </ClCompile>
-    <ClCompile Include="CLASS\COM\CommPort.cpp">
-      <Filter>CLASS\COM</Filter>
-    </ClCompile>
     <ClCompile Include="CLASS\BCG\CWBCG.cpp">
       <Filter>CLASS\BCG</Filter>
     </ClCompile>
     <ClCompile Include="class\bcg\bcgdlg.CPP">
       <Filter>CLASS\BCG</Filter>
-    </ClCompile>
-    <ClCompile Include="CLASS\CAM\Camera.cpp">
-      <Filter>CLASS\CAM</Filter>
-    </ClCompile>
-    <ClCompile Include="CLASS\CAM\ImageingSource.cpp">
-      <Filter>CLASS\CAM</Filter>
-    </ClCompile>
-    <ClCompile Include="CLASS\CAM\YPtgCamera.cpp">
-      <Filter>CLASS\CAM</Filter>
-    </ClCompile>
-    <ClCompile Include="CLASS\CAM\CamList.cpp">
-      <Filter>CLASS\CAM</Filter>
-    </ClCompile>
-    <ClCompile Include="CLASS\CAM\KSJCamera.cpp">
-      <Filter>CLASS\CAM</Filter>
     </ClCompile>
     <ClCompile Include="CLASS\ROB\WTalk.cpp">
       <Filter>CLASS\CWROB</Filter>
@@ -272,23 +179,8 @@
     <ClCompile Include="YCIni.cpp">
       <Filter>assistant</Filter>
     </ClCompile>
-    <ClCompile Include="EXTERN\MotionCard\INC\GoogolExtroIO.cpp">
-      <Filter>MotionCard</Filter>
-    </ClCompile>
-    <ClCompile Include="EXTERN\MotionCard\INC\goolgol.cpp">
-      <Filter>MotionCard</Filter>
-    </ClCompile>
-    <ClCompile Include="EXTERN\MotionCard\INC\Input.cpp">
-      <Filter>MotionCard</Filter>
-    </ClCompile>
-    <ClCompile Include="EXTERN\MotionCard\INC\MotionCard1.cpp">
-      <Filter>MotionCard</Filter>
-    </ClCompile>
-    <ClCompile Include="EXTERN\MotionCard\INC\Motor.cpp">
-      <Filter>MotionCard</Filter>
-    </ClCompile>
-    <ClCompile Include="EXTERN\MotionCard\INC\Output.cpp">
-      <Filter>MotionCard</Filter>
+    <ClCompile Include="CLASS\COM\CommPort.cpp">
+      <Filter>CLASS\COM</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
