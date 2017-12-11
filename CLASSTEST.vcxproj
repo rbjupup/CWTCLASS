@@ -104,6 +104,8 @@
     <None Include="bg1.png" />
     <None Include="bg2.png" />
     <None Include="ReadMe.txt" />
+    <None Include="res\bg1.png" />
+    <None Include="res\bg2.png" />
     <None Include="res\CLASSTEST.ico" />
     <None Include="res\CLASSTEST.rc2" />
   </ItemGroup>
@@ -111,7 +113,6 @@
     <ClInclude Include="BOSSCLASS.h" />
     <ClInclude Include="CLASS\BCG\BCGdlg.h" />
     <ClInclude Include="CLASS\BCG\CWBCG.h" />
-    <ClInclude Include="CLASS\COM\CommPort.h" />
     <ClInclude Include="CLASS\MFCCTRL\GdipButton.h" />
     <ClInclude Include="CLASS\MFCCTRL\WMFCBtn.h" />
     <ClInclude Include="CLASS\ROB\pinyin.h" />
@@ -122,7 +123,6 @@
     <ClInclude Include="CLASS\ROB\WROBO.h" />
     <ClInclude Include="CLASS\ROB\WTalk.h" />
     <ClInclude Include="DefineOfString.h" />
-    <ClInclude Include="WCalibreate.h" />
     <ClInclude Include="CLASSTEST.h" />
     <ClInclude Include="CLASSTESTDlg.h" />
     <ClInclude Include="Def.h" />
@@ -137,7 +137,6 @@
     <ClCompile Include="BOSSCLASS.cpp" />
     <ClCompile Include="class\bcg\bcgdlg.CPP" />
     <ClCompile Include="CLASS\BCG\CWBCG.cpp" />
-    <ClCompile Include="CLASS\COM\CommPort.cpp" />
     <ClCompile Include="CLASS\MFCCTRL\GdipButton.cpp" />
     <ClCompile Include="CLASS\MFCCTRL\WMFCBtn.cpp" />
     <ClCompile Include="CLASS\ROB\speech_recognizer.c">
@@ -150,7 +149,6 @@
     <ClCompile Include="CLASS\ROB\WListen.cpp" />
     <ClCompile Include="CLASS\ROB\WROBO.cpp" />
     <ClCompile Include="CLASS\ROB\WTalk.cpp" />
-    <ClCompile Include="WCalibreate.cpp" />
     <ClCompile Include="CLASSTEST.cpp" />
     <ClCompile Include="CLASSTESTDlg.cpp" />
     <ClCompile Include="ResDlg.cpp" />

@@ -25,7 +25,7 @@ protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
 	DECLARE_MESSAGE_MAP()
 public:
-	Bitmap m_Bg1,m_Bg2;
+	Gdiplus::Bitmap m_Bg1,m_Bg2;
 	virtual BOOL OnInitDialog();
 	afx_msg void OnPaint();
 	afx_msg void OnBnClickedButtonUnnormal2();

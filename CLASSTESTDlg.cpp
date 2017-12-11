@@ -48,24 +48,28 @@ END_MESSAGE_MAP()
 
 
 CCLASSTESTDlg::CCLASSTESTDlg(CWnd* pParent /*=NULL*/)
-	: CDialogEx(CCLASSTESTDlg::IDD, pParent)
+	: CDialog(CCLASSTESTDlg::IDD, pParent)
 	, m_strHelp(_T(""))
 	, m_strInput(_T(""))
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
+	m_row = 0;
+	m_column = 0;
+
 }
 
 void CCLASSTESTDlg::DoDataExchange(CDataExchange* pDX)
 {
-	CDialogEx::DoDataExchange(pDX);
+	CDialog::DoDataExchange(pDX);
 	DDX_Control(pDX, IDC_COMBO1, m_cbSupportClass);
 	DDX_Control(pDX, IDC_COMBO2, m_cbFunction);
 	DDX_Text(pDX, IDC_EDIT1, m_strHelp);
 	DDX_Text(pDX, IDC_EDIT_INPUT, m_strInput);
 	DDX_Control(pDX, IDC_LIST1, m_ListInput);
+	DDX_Control(pDX, IDC_EDIT_TMP, m_edit);
 }
 
-BEGIN_MESSAGE_MAP(CCLASSTESTDlg, CDialogEx)
+BEGIN_MESSAGE_MAP(CCLASSTESTDlg, CDialog)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
@@ -74,6 +78,9 @@ BEGIN_MESSAGE_MAP(CCLASSTESTDlg, CDialogEx)
 	ON_BN_CLICKED(IDC_BUTTON_INPUT, &CCLASSTESTDlg::OnBnClickedButtonInput)
 	ON_BN_CLICKED(IDC_BUTTON1, &CCLASSTESTDlg::OnBnClickedButton1)
 	ON_CBN_SELCHANGE(IDC_COMBO1, &CCLASSTESTDlg::OnCbnSelchangeCombo1)
+	ON_BN_CLICKED(IDC_BUTTON2, &CCLASSTESTDlg::OnBnClickedButton2)
+	ON_EN_KILLFOCUS(IDC_EDIT_TMP, &CCLASSTESTDlg::OnEnKillfocusEditTmp)
+	ON_NOTIFY(NM_DBLCLK, IDC_LIST1, &CCLASSTESTDlg::OnNMDblclkList1)
 END_MESSAGE_MAP()
 
 
@@ -81,8 +88,12 @@ END_MESSAGE_MAP()
 
 BOOL CCLASSTESTDlg::OnInitDialog()
 {
-	CDialogEx::OnInitDialog();
-
+	CDialog::OnInitDialog();
+#ifdef BCG
+	CBCGPVisualManager2010::SetStyle (CBCGPVisualManager2010::VS2010_Blue);
+	CBCGPVisualManager::SetDefaultManager (RUNTIME_CLASS (CBCGPVisualManager2010));
+	EnableVisualManagerStyle();
+#endif
 	// 将“关于...”菜单项添加到系统菜单中。
 
 	// IDM_ABOUTBOX 必须在系统命令范围内。
@@ -113,31 +124,33 @@ BOOL CCLASSTESTDlg::OnInitDialog()
 	m_cbFunction.ResetContent();
 	vector<CString> supportclass;
 	supportclass = m_boss.GetSupportClass();
-
 	for (int  i = 0 ; i < supportclass.size(); i++)
 	{
 		m_cbSupportClass.AddString(supportclass[i]);
-		if (supportclass[i] == CLASSNAME1)
-		{
-			m_cbSupportClass.SetCurSel(i);
-		}
 	}
+	m_cbSupportClass.SetCurSel(0);
 
 	vector<CString> supportFunction;
 	CString curClassName;
 	m_cbSupportClass.GetLBText(m_cbSupportClass.GetCurSel(),curClassName);
 	supportFunction = m_boss.GetSupportFunCtion(curClassName);
-
 	for (int  i = 0 ; i < supportFunction.size(); i++)
 	{
 		m_cbFunction.AddString(supportFunction[i]);
-		if (supportFunction[i] == "TESTCAMTOBOARD")
-		{
-			m_cbFunction.SetCurSel(i);
-		}
 	}
+	m_cbFunction.SetCurSel(0);
 	OnCbnSelchangeCombo2();
-	m_ListInput.InsertColumn(0,"输入内容",0,1200);
+
+	LONG lStyle;
+	lStyle = GetWindowLong(m_ListInput.m_hWnd, GWL_STYLE);//获取当前窗口style
+	lStyle |= LVS_REPORT; //设置style
+	SetWindowLong(m_ListInput.m_hWnd, GWL_STYLE, lStyle);//设置style
+	DWORD dwStyle = m_ListInput.GetExtendedStyle();
+	dwStyle |= LVS_EX_FULLROWSELECT;//选中某行使整行高亮（只适用与report风格的listctrl）
+	dwStyle |= LVS_EX_GRIDLINES;//网格线（只适用与report风格的listctrl）
+	m_ListInput.SetExtendedStyle(dwStyle); //设置扩展风格
+	m_ListInput.InsertColumn(0,"输入编号",0,80);
+	m_ListInput.InsertColumn(1,"输入内容",0,400);
 
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
@@ -151,7 +164,7 @@ void CCLASSTESTDlg::OnSysCommand(UINT nID, LPARAM lParam)
 	}
 	else
 	{
-		CDialogEx::OnSysCommand(nID, lParam);
+		CDialog::OnSysCommand(nID, lParam);
 	}
 }
 
@@ -180,7 +193,7 @@ void CCLASSTESTDlg::OnPaint()
 	}
 	else
 	{
-		CDialogEx::OnPaint();
+		CDialog::OnPaint();
 	}
 }
 
@@ -203,7 +216,7 @@ void CCLASSTESTDlg::OnBnClickedButtonStart()
 	int ncount = m_ListInput.GetItemCount();
 	for (int i = 0 ; i < ncount; i++)
 	{
-		CString strText =  m_ListInput.GetItemText(i,0);
+		CString strText =  m_ListInput.GetItemText(i,1);
 		param.push_back(strText);
 	}
 
@@ -231,9 +244,13 @@ void CCLASSTESTDlg::OnBnClickedButtonInput()
 {
 	UpdateData(TRUE);
 	int ncount = m_ListInput.GetItemCount();
-	m_ListInput.InsertItem(ncount,m_strInput);
+
+	CString numIndex;
+	numIndex.Format("%d",ncount);
+	m_ListInput.InsertItem(ncount,numIndex);
+	m_ListInput.SetItemText(ncount,1,m_strInput);
 	m_strInput = CString("");
-	UpdateData(TRUE);
+	UpdateData(FALSE);
 }
 
 
@@ -260,4 +277,101 @@ void CCLASSTESTDlg::OnCbnSelchangeCombo1()
 	}
 	m_cbFunction.SetCurSel(0);
 	OnCbnSelchangeCombo2();
+}
+
+//删除选中
+void CCLASSTESTDlg::OnBnClickedButton2()
+{
+	POSITION pos = m_ListInput.GetFirstSelectedItemPosition();
+	int num =(int)pos - 1;
+	vector<CString> param;
+	int ncount = m_ListInput.GetItemCount();
+	for (int i = 0 ; i < ncount; i++)
+	{
+		if(i == num)
+			continue;
+		CString strText =  m_ListInput.GetItemText(i,1);
+		param.push_back(strText);
+	}
+	m_ListInput.DeleteAllItems();
+	for (int i = 0; i < param.size(); i++)
+	{
+		CString numIndex;
+		numIndex.Format("%d",i);
+		m_ListInput.InsertItem(i,numIndex);
+		m_ListInput.SetItemText(i,1,param[i]);
+	}
+	return;
+}
+
+
+void CCLASSTESTDlg::OnEnKillfocusEditTmp()
+{
+	CString str;
+	m_edit.GetWindowText(str);//取得编辑框的内容
+	m_ListInput.SetItemText(m_row,m_column,str);//将该内容更新到CListCtrl中
+	m_edit.ShowWindow(SW_HIDE);//隐藏编辑框
+	POSITION pos = m_ListInput.GetFirstSelectedItemPosition();
+	int num =m_row;//(int)pos - 1;
+
+	if (m_column == 0||m_row == 0)
+	{
+		return;
+	}
+
+	vector<CString> param;
+	int ncount = m_ListInput.GetItemCount();
+	for (int i = 0 ; i < ncount; i++)
+	{
+		CString strText =  m_ListInput.GetItemText(i,1);
+		if(i == num)
+			param.push_back(str);
+		else
+			param.push_back(strText);
+	}
+	m_ListInput.DeleteAllItems();
+	for (int i = 0; i < param.size(); i++)
+	{
+		CString numIndex;
+		numIndex.Format("%d",i);
+		m_ListInput.InsertItem(i,numIndex);
+		m_ListInput.SetItemText(i,1,param[i]);
+	}
+	return;
+}
+
+
+void CCLASSTESTDlg::OnNMDblclkList1(NMHDR *pNMHDR, LRESULT *pResult)
+{
+	LPNMITEMACTIVATE pNMItemActivate = reinterpret_cast<LPNMITEMACTIVATE>(pNMHDR);
+	NM_LISTVIEW* pNMListView=(NM_LISTVIEW*)pNMHDR;
+	CRect rc,rect;
+	if(pNMListView->iItem!=-1)
+	{
+		m_row=pNMListView->iItem;//m_row为被选中行的行序号（int类型成员变量）
+		m_column=pNMListView->iSubItem;//m_column为被选中行的列序号（int类型成员变量）
+		m_ListInput.GetSubItemRect(pNMListView->iItem, pNMListView->iSubItem,LVIR_LABEL,rc);//取得子项的矩形
+		GetDlgItem(IDC_LIST1)->GetWindowRect(&rect);//获取控件的屏幕坐标
+		ScreenToClient(&rect);//转换为对话框上的客户坐标
+		rc.left+=3;
+		rc.left+=rect.left;
+		rc.top+=2;
+		rc.top+=rect.top;
+		rc.right+=3;
+		rc.right+=rect.left;
+		rc.bottom+=2;
+		rc.bottom+=rect.top;
+
+		char * ch=new char [128];
+		m_ListInput.GetItemText(pNMListView->iItem, pNMListView->iSubItem,ch,128);//取得子项的内容
+		m_edit.SetWindowText(ch);//将子项的内容显示到编辑框中
+		m_edit.ShowWindow(SW_SHOW);//显示编辑框
+		m_edit.MoveWindow(&rc);//将编辑框移动到子项上面，覆盖在子项上
+		m_edit.SetFocus();//使编辑框取得焦点
+		m_edit.BringWindowToTop();
+		m_edit.CreateSolidCaret(1,rc.Height()-5);//创建一个光标
+		m_edit.ShowCaret();//显示光标
+		m_edit.SetSel(-1);//使光标移到最后面
+	}
+	*pResult = 0;
 }

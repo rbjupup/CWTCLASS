@@ -28,12 +28,6 @@
     <Filter Include="assistant">
       <UniqueIdentifier>{e4bcb0d9-2ac2-4204-95c2-4fbe55868117}</UniqueIdentifier>
     </Filter>
-    <Filter Include="CLASS\CAL">
-      <UniqueIdentifier>{3e56b4bf-211c-4217-9747-6b8922fb2e9d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="CLASS\COM">
-      <UniqueIdentifier>{a0e64583-4fd1-4fba-810d-5484d529677d}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
@@ -47,6 +41,12 @@
       <Filter>资源文件</Filter>
     </None>
     <None Include="bg2.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\bg1.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\bg2.png">
       <Filter>资源文件</Filter>
     </None>
   </ItemGroup>
@@ -111,17 +111,11 @@
     <ClInclude Include="CLASS\ROB\TuLing.h">
       <Filter>CLASS\CWROB</Filter>
     </ClInclude>
-    <ClInclude Include="WCalibreate.h">
-      <Filter>CLASS\CAL</Filter>
-    </ClInclude>
     <ClInclude Include="YCIni.h">
       <Filter>assistant</Filter>
     </ClInclude>
     <ClInclude Include="XFunCom.h">
       <Filter>assistant</Filter>
-    </ClInclude>
-    <ClInclude Include="CLASS\COM\CommPort.h">
-      <Filter>CLASS\COM</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -170,17 +164,11 @@
     <ClCompile Include="CLASS\ROB\TuLing.cpp">
       <Filter>CLASS\CWROB</Filter>
     </ClCompile>
-    <ClCompile Include="WCalibreate.cpp">
-      <Filter>CLASS\CAL</Filter>
-    </ClCompile>
     <ClCompile Include="XFunCom.cpp">
       <Filter>assistant</Filter>
     </ClCompile>
     <ClCompile Include="YCIni.cpp">
       <Filter>assistant</Filter>
-    </ClCompile>
-    <ClCompile Include="CLASS\COM\CommPort.cpp">
-      <Filter>CLASS\COM</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

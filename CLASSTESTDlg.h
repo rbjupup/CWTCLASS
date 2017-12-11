@@ -8,7 +8,8 @@
 #include "afxcmn.h"
 
 // CCLASSTESTDlg 对话框
-class CCLASSTESTDlg : public CDialogEx
+#define CDialog CBCGPDialog
+class CCLASSTESTDlg : public CDialog
 {
 // 构造
 public:
@@ -36,13 +37,20 @@ public:
 	BOSSCLASS m_boss;								//主要类，用来调度各个测试类
 
 	afx_msg void OnBnClickedButtonStart();
-	CComboBox m_cbSupportClass;
-	CComboBox m_cbFunction;
+	CBCGPComboBox m_cbSupportClass;
+	CBCGPComboBox m_cbFunction;
 	afx_msg void OnCbnSelchangeCombo2();
 	CString m_strHelp;
 	CString m_strInput;
 	afx_msg void OnBnClickedButtonInput();
-	CListCtrl m_ListInput;
+	CBCGPListCtrl m_ListInput;
 	afx_msg void OnBnClickedButton1();
 	afx_msg void OnCbnSelchangeCombo1();
+	afx_msg void OnBnClickedButton2();
+	CEdit m_edit;
+	afx_msg void OnEnKillfocusEditTmp();
+
+
+	int m_row,m_column;
+	afx_msg void OnNMDblclkList1(NMHDR *pNMHDR, LRESULT *pResult);
 };

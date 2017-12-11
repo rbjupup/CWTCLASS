@@ -39,50 +39,58 @@ BOOL ABCGDlg::OnInitDialog()
 #ifdef BCG
 	CBCGPVisualManager2010::SetStyle (CBCGPVisualManager2010::VS2010_Black);
 	CBCGPVisualManager::SetDefaultManager (RUNTIME_CLASS (CBCGPVisualManager2010));
-#endif
 	EnableVisualManagerStyle();
 	// 异常: OCX 属性页应返回 FALSE
 
+	m_arSeries[0] = NULL;
 
-
-	//波形图绘制
 	CBCGPChartVisualObject* pChart = m_wndChart.GetChart();
 	ASSERT_VALID(pChart);
 
+	CBCGPColor tmpcolor;
+	CBCGPChartTheme theme;
+	theme.InitChartColors(theme,CBCGPColor::Black,CBCGPColor::White,CBCGPColor::Green,CBCGPColor::Green,CBCGPColor::Black);
+	theme.m_brAxisInterlaceColor = CBCGPBrush(CBCGPColor::Black);
+	tmpcolor.SetRGB(RGB(50,100,50));
+	theme.m_brAxisMajorGridLineColor = CBCGPBrush(tmpcolor);
+	theme.m_brAxisMinorGridLineColor = CBCGPBrush(tmpcolor);
+	theme.m_brAxisLineColor = CBCGPBrush(CBCGPColor::Green);
+	pChart->SetColors(theme);
+
+
 	pChart->ShowAxisIntervalInterlacing(BCGP_CHART_X_PRIMARY_AXIS, FALSE);
 
-	pChart->SetChartType (BCGPChartHistoricalLine, BCGP_CT_SIMPLE, FALSE);
-	pChart->SetLegendPosition(BCGPChartLayout::LP_TOPRIGHT);
+	pChart->SetChartType (BCGPChartHistoricalLine, BCGP_CT_SIMPLE, TRUE);
+	pChart->SetLegendPosition(BCGPChartLayout::LP_RIGHT);
 
 	CBCGPChartAxis* pXAxis = pChart->GetChartAxis(BCGP_CHART_X_PRIMARY_AXIS);
 	ASSERT_VALID(pXAxis);
 
 	pXAxis->m_axisLabelType = CBCGPChartAxis::ALT_NO_LABELS;
 	pXAxis->m_majorTickMarkType = CBCGPChartAxis::TMT_NO_TICKS;
-	pXAxis->SetFixedIntervalWidth(40, 10);
+	pXAxis->SetFixedIntervalWidth(20, 1);
+	pXAxis->SetAxisOffsets(0,0);
 
 	CBCGPChartAxis* pYAxis = pChart->GetChartAxis(BCGP_CHART_Y_PRIMARY_AXIS);
 	ASSERT_VALID(pYAxis);
-
-	pYAxis->SetFixedDisplayRange(0., 100, 1);
-
+	pYAxis->SetFixedIntervalWidth(20, 1);
+	pYAxis->SetAxisOffsets(0,0);
+	pYAxis->Reset();
+	pYAxis->SetFixedDisplayRange(0, 100,10);
 	pYAxis->m_bDisplayAxisName = FALSE;
 
 	pChart->ShowAxisIntervalInterlacing(BCGP_CHART_Y_PRIMARY_AXIS);
-	for (int i = 0; i < 1; i++)
-	{
+	CString strLabel;
+	strLabel.Format(_T("CycleTime"));
+	tmpcolor.SetRGB(RGB(0,255,0));
+	if(m_arSeries[0] == NULL)
+		m_arSeries[0] = pChart->CreateSeries(strLabel,tmpcolor);
+	m_arSeries[0]->SetSeriesLineColor(tmpcolor);
+	pChart->SetDirty();
+	pChart->Redraw();
 
-		CString strLabel;
-		strLabel.Format(_T("OutTime"), i + 1);
 
-		m_arSeries[i] = pChart->CreateSeries(strLabel);
-
-		if (i > 0)
-		{
-			pChart->ShowSeries(FALSE, i);
-		}
-	}
-
+#endif
 
 //波形图绘制End
 

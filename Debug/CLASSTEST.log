@@ -1,92 +1,16 @@
-﻿生成启动时间为 2017/12/5 9:13:50。
+﻿生成启动时间为 2017/12/11 18:06:48。
      1>项目“D:\app\rbj\now\CWTCLASS\CLASSTEST.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“Debug\CWCLASS.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
-         d:\app\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\CWCLASS.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
-         stdafx.cpp
-     1>d:\app\rbj\now\cwtclass\xfuncom.h(86): warning C4091: “typedef ”: 没有声明变量时忽略“FloatPoint2D”的左侧
-     1>d:\app\rbj\now\cwtclass\xfuncom.h(105): warning C4091: “typedef ”: 没有声明变量时忽略“FloatPoint3D”的左侧
-         Automatically linking with BCGCBPRO1610D100.lib
-         d:\app\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\CWCLASS.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt BOSSCLASS.cpp CLASSTEST.cpp CLASSTESTDlg.cpp CLASS\BCG\CWBCG.cpp CLASS\COM\CommPort.cpp CLASS\MFCCTRL\GdipButton.cpp CLASS\MFCCTRL\WMFCBtn.cpp CLASS\ROB\TuLing.cpp CLASS\ROB\WListen.cpp CLASS\ROB\WROBO.cpp CLASS\ROB\WTalk.cpp ResDlg.cpp WCalibreate.cpp XFunCom.cpp YCIni.cpp class\bcg\bcgdlg.CPP
-         bcgdlg.CPP
-         YCIni.cpp
-     1>d:\app\rbj\now\cwtclass\ycini.cpp(539): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\app\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : 参见“sscanf”的声明
-     1>d:\app\rbj\now\cwtclass\ycini.cpp(559): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\app\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : 参见“sscanf”的声明
-     1>d:\app\rbj\now\cwtclass\ycini.cpp(580): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\app\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : 参见“sscanf”的声明
-         XFunCom.cpp
-     1>d:\app\rbj\now\cwtclass\xfuncom.cpp(76): warning C4800: “BOOL”: 将值强制为布尔值“true”或“false”(性能警告)
-     1>d:\app\rbj\now\cwtclass\xfuncom.cpp(83): warning C4800: “BOOL”: 将值强制为布尔值“true”或“false”(性能警告)
-     1>d:\app\rbj\now\cwtclass\xfuncom.cpp(67): warning C4101: “line”: 未引用的局部变量
-     1>d:\app\rbj\now\cwtclass\xfuncom.cpp(68): warning C4101: “fn”: 未引用的局部变量
-     1>d:\app\rbj\now\cwtclass\xfuncom.cpp(115): warning C4800: “BOOL”: 将值强制为布尔值“true”或“false”(性能警告)
-     1>d:\app\rbj\now\cwtclass\xfuncom.cpp(300): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\app\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(371) : 参见“sprintf”的声明
-     1>d:\app\rbj\now\cwtclass\xfuncom.cpp(749): warning C4996: '_splitpath': This function or variable may be unsafe. Consider using _splitpath_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\app\program files (x86)\microsoft visual studio 10.0\vc\include\stdlib.h(791) : 参见“_splitpath”的声明
-         WCalibreate.cpp
-     1>d:\app\rbj\now\cwtclass\extern\opencv\build\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\app\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : 参见“fopen”的声明
-     1>d:\app\rbj\now\cwtclass\extern\opencv\build\include\opencv2\flann\flann.hpp(233): warning C4996: 'cv::flann::Index_<T>': 被声明为已否决
-                 d:\app\rbj\now\cwtclass\extern\opencv\build\include\opencv2\flann\flann.hpp(278): 参见对正在编译的类 模板 实例化“cv::flann::Index_<T>”的引用
-     1>d:\app\rbj\now\cwtclass\wcalibreate.cpp(43): warning C4101: “frealx”: 未引用的局部变量
-     1>d:\app\rbj\now\cwtclass\wcalibreate.cpp(43): warning C4101: “frealy”: 未引用的局部变量
-     1>d:\app\rbj\now\cwtclass\wcalibreate.cpp(335): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-     1>d:\app\rbj\now\cwtclass\wcalibreate.cpp(335): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-         ResDlg.cpp
-         WTalk.cpp
-     1>d:\app\rbj\now\cwtclass\class\rob\wtalk.cpp(57): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\app\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : 参见“fopen”的声明
-     1>d:\app\rbj\now\cwtclass\class\rob\wtalk.cpp(190): warning C4102: “exit”: 未引用的标签
-         WROBO.cpp
-         Automatically linking with winmm.lib
-     1>d:\app\rbj\now\cwtclass\class\rob\pinyin.h(85): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\app\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(110) : 参见“strcat”的声明
-     1>d:\app\rbj\now\cwtclass\class\rob\pinyin.h(89): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\app\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(110) : 参见“strcat”的声明
-     1>d:\app\rbj\now\cwtclass\class\rob\wrobo.cpp(7): warning C4482: 使用了非标准扩展: 限定名中使用了枚举“CWROBO::sex”
-         WListen.cpp
-     1>d:\app\rbj\now\cwtclass\class\rob\wlisten.cpp(36): warning C4101: “orig”: 未引用的局部变量
-     1>d:\app\rbj\now\cwtclass\class\rob\wlisten.cpp(77): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\app\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : 参见“fopen”的声明
-     1>d:\app\rbj\now\cwtclass\class\rob\wlisten.cpp(185): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\app\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(175) : 参见“strncat”的声明
-     1>d:\app\rbj\now\cwtclass\class\rob\wlisten.cpp(230): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\app\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : 参见“fopen”的声明
-     1>d:\app\rbj\now\cwtclass\class\rob\wlisten.cpp(417): warning C4533: “goto recnotifier”跳过了“exitlog”的初始化操作
-                 d:\app\rbj\now\cwtclass\class\rob\wlisten.cpp(348) : 参见“recnotifier”的声明
-                 d:\app\rbj\now\cwtclass\class\rob\wlisten.cpp(417) : 参见“exitlog”的声明
-         TuLing.cpp
-         WMFCBtn.cpp
-     1>d:\app\rbj\now\cwtclass\class\mfcctrl\wmfcbtn.cpp(18): warning C4996: 'wcsset': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _wcsset. See online help for details.
-                 d:\app\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(394) : 参见“wcsset”的声明
-         GdipButton.cpp
-         CommPort.cpp
-         CWBCG.cpp
+         所有输出均为最新。
+         d:\app\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\CWCLASS.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt CLASSTESTDlg.cpp
          CLASSTESTDlg.cpp
-     1>d:\app\rbj\now\cwtclass\extern\opencv\build\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\app\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : 参见“fopen”的声明
-     1>d:\app\rbj\now\cwtclass\extern\opencv\build\include\opencv2\flann\flann.hpp(233): warning C4996: 'cv::flann::Index_<T>': 被声明为已否决
-                 d:\app\rbj\now\cwtclass\extern\opencv\build\include\opencv2\flann\flann.hpp(278): 参见对正在编译的类 模板 实例化“cv::flann::Index_<T>”的引用
-     1>d:\app\rbj\now\cwtclass\classtestdlg.cpp(117): warning C4018: “<”: 有符号/无符号不匹配
-     1>d:\app\rbj\now\cwtclass\classtestdlg.cpp(131): warning C4018: “<”: 有符号/无符号不匹配
-     1>d:\app\rbj\now\cwtclass\classtestdlg.cpp(257): warning C4018: “<”: 有符号/无符号不匹配
-         CLASSTEST.cpp
-     1>d:\app\rbj\now\cwtclass\extern\opencv\build\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\app\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : 参见“fopen”的声明
-     1>d:\app\rbj\now\cwtclass\extern\opencv\build\include\opencv2\flann\flann.hpp(233): warning C4996: 'cv::flann::Index_<T>': 被声明为已否决
-                 d:\app\rbj\now\cwtclass\extern\opencv\build\include\opencv2\flann\flann.hpp(278): 参见对正在编译的类 模板 实例化“cv::flann::Index_<T>”的引用
-         BOSSCLASS.cpp
-     1>d:\app\rbj\now\cwtclass\extern\opencv\build\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\app\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : 参见“fopen”的声明
-     1>d:\app\rbj\now\cwtclass\extern\opencv\build\include\opencv2\flann\flann.hpp(233): warning C4996: 'cv::flann::Index_<T>': 被声明为已否决
-                 d:\app\rbj\now\cwtclass\extern\opencv\build\include\opencv2\flann\flann.hpp(278): 参见对正在编译的类 模板 实例化“cv::flann::Index_<T>”的引用
-     1>d:\app\rbj\now\cwtclass\bossclass.cpp(250): warning C4018: “<”: 有符号/无符号不匹配
-         正在生成代码...
-     1>d:\app\rbj\now\cwtclass\class\rob\wlisten.cpp(419): warning C4715: “demo_mic”: 不是所有的控件路径都返回值
+     1>d:\app\rbj\now\cwtclass\classtestdlg.cpp(127): warning C4018: “<”: 有符号/无符号不匹配
+     1>d:\app\rbj\now\cwtclass\classtestdlg.cpp(137): warning C4018: “<”: 有符号/无符号不匹配
+     1>d:\app\rbj\now\cwtclass\classtestdlg.cpp(274): warning C4018: “<”: 有符号/无符号不匹配
+     1>d:\app\rbj\now\cwtclass\classtestdlg.cpp(297): warning C4018: “<”: 有符号/无符号不匹配
+     1>d:\app\rbj\now\cwtclass\classtestdlg.cpp(333): warning C4018: “<”: 有符号/无符号不匹配
          所有输出均为最新。
        ResourceCompile:
          所有输出均为最新。
@@ -95,7 +19,6 @@
          Debug\BOSSCLASS.obj
          Debug\bcgdlg.obj
          Debug\CWBCG.obj
-         Debug\CommPort.obj
          Debug\GdipButton.obj
          Debug\WMFCBtn.obj
          Debug\speech_recognizer.obj
@@ -104,7 +27,6 @@
          Debug\WListen.obj
          Debug\WROBO.obj
          Debug\WTalk.obj
-         Debug\WCalibreate.obj
          Debug\CLASSTEST.obj
          Debug\CLASSTESTDlg.obj
          Debug\ResDlg.obj
@@ -119,4 +41,4 @@
 
 生成成功。
 
-已用时间 00:00:20.95
+已用时间 00:00:00.77
